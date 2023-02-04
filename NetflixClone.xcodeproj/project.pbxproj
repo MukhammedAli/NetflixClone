@@ -22,6 +22,7 @@
 		D1D95185298C074200FADD48 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D95184298C074200FADD48 /* UpcomingViewController.swift */; };
 		D1D95187298C076100FADD48 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D95186298C076100FADD48 /* SearchViewController.swift */; };
 		D1D95189298C076F00FADD48 /* DonwloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D95188298C076F00FADD48 /* DonwloadsViewController.swift */; };
+		D1F0EC3B298E5F4D0045137F /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0EC3A298E5F4D0045137F /* CollectionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		D1D95184298C074200FADD48 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		D1D95186298C076100FADD48 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D1D95188298C076F00FADD48 /* DonwloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonwloadsViewController.swift; sourceTree = "<group>"; };
+		D1F0EC3A298E5F4D0045137F /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		D4F45FF149A25FC3971923DB /* Pods_NetflixClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5896CB0B8FCC36117A22C59 /* Pods-NetflixCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixCloneTests.release.xcconfig"; path = "Target Support Files/Pods-NetflixCloneTests/Pods-NetflixCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF1F8A0AEC0E85F10E604792 /* Pods_NetflixClone_NetflixCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixClone_NetflixCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,11 @@
 		D1D95150298C03C900FADD48 /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				D1F0EC39298E5EC20045137F /* Managers */,
+				D1F0EC38298E5EBA0045137F /* Resources */,
+				D1F0EC37298E5E760045137F /* Models */,
+				D1F0EC35298E5E4A0045137F /* Views */,
+				D1F0EC36298E5E580045137F /* ViewModels */,
 				D1D95181298C06A600FADD48 /* ViewControllers */,
 				D1D95151298C03C900FADD48 /* AppDelegate.swift */,
 				D1D95153298C03C900FADD48 /* SceneDelegate.swift */,
@@ -172,6 +179,42 @@
 				D1D95188298C076F00FADD48 /* DonwloadsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D1F0EC35298E5E4A0045137F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0EC3A298E5F4D0045137F /* CollectionViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1F0EC36298E5E580045137F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D1F0EC37298E5E760045137F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1F0EC38298E5EBA0045137F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D1F0EC39298E5EC20045137F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		F6EE0A0934540A7DF98ECC83 /* Frameworks */ = {
@@ -424,6 +467,7 @@
 			files = (
 				D1D95187298C076100FADD48 /* SearchViewController.swift in Sources */,
 				D1D95156298C03C900FADD48 /* MainTabBarViewController.swift in Sources */,
+				D1F0EC3B298E5F4D0045137F /* CollectionViewTableViewCell.swift in Sources */,
 				D1D95152298C03C900FADD48 /* AppDelegate.swift in Sources */,
 				D1D95154298C03C900FADD48 /* SceneDelegate.swift in Sources */,
 				D1D95189298C076F00FADD48 /* DonwloadsViewController.swift in Sources */,

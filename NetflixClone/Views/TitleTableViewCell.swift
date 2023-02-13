@@ -13,11 +13,16 @@ class TitleTableViewCell: UITableViewCell {
 
     
     
+    
+    
     static let identifier = "TitleTableViewCell"
     
     private let playTitleButton: UIButton = {
        let button = UIButton()
+        let image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20))
         
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
         return button
     }()
     
@@ -29,6 +34,7 @@ class TitleTableViewCell: UITableViewCell {
     private let titlesPosterUIImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds  = true
         return imageView
     }()
     
@@ -57,6 +63,12 @@ class TitleTableViewCell: UITableViewCell {
             $0.top.bottom.equalToSuperview()
 //            $0.top.bottom.equalToSuperview()
             
+        }
+        
+        playTitleButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(20)
+           // $0.left.equalTo(titleLabel.snp.right).inset(-30)
+            $0.top.bottom.equalToSuperview()
         }
     }
     

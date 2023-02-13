@@ -30,6 +30,8 @@
 		D1D95187298C076100FADD48 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D95186298C076100FADD48 /* SearchViewController.swift */; };
 		D1D95189298C076F00FADD48 /* DonwloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D95188298C076F00FADD48 /* DonwloadsViewController.swift */; };
 		D1F0EC3B298E5F4D0045137F /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0EC3A298E5F4D0045137F /* CollectionViewTableViewCell.swift */; };
+		D1FDA12A2997995A0097E794 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDA1292997995A0097E794 /* TitleTableViewCell.swift */; };
+		D1FDA12C2999518D0097E794 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDA12B2999518D0097E794 /* TitleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		D1D95186298C076100FADD48 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D1D95188298C076F00FADD48 /* DonwloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonwloadsViewController.swift; sourceTree = "<group>"; };
 		D1F0EC3A298E5F4D0045137F /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		D1FDA1292997995A0097E794 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		D1FDA12B2999518D0097E794 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		D4F45FF149A25FC3971923DB /* Pods_NetflixClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5896CB0B8FCC36117A22C59 /* Pods-NetflixCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixCloneTests.release.xcconfig"; path = "Target Support Files/Pods-NetflixCloneTests/Pods-NetflixCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF1F8A0AEC0E85F10E604792 /* Pods_NetflixClone_NetflixCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixClone_NetflixCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +205,7 @@
 				D1F0EC3A298E5F4D0045137F /* CollectionViewTableViewCell.swift */,
 				D14F3898298F92DD0041EE79 /* HeroHeaderUIView.swift */,
 				D14F38A22994D82D0041EE79 /* TitleCollectionViewCell.swift */,
+				D1FDA1292997995A0097E794 /* TitleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 		D1F0EC36298E5E580045137F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D1FDA12B2999518D0097E794 /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1FDA12A2997995A0097E794 /* TitleTableViewCell.swift in Sources */,
 				D1D95187298C076100FADD48 /* SearchViewController.swift in Sources */,
 				D14F38A32994D82D0041EE79 /* TitleCollectionViewCell.swift in Sources */,
 				D1D95156298C03C900FADD48 /* MainTabBarViewController.swift in Sources */,
@@ -504,6 +511,7 @@
 				D1D95185298C074200FADD48 /* UpcomingViewController.swift in Sources */,
 				D14F389D299387EE0041EE79 /* Title.swift in Sources */,
 				D1D95183298C06E200FADD48 /* HomeViewController.swift in Sources */,
+				D1FDA12C2999518D0097E794 /* TitleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +681,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R45WMW8LSD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NetflixClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -700,6 +709,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R45WMW8LSD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NetflixClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 enum Sections: Int {
     case TrendingMovies = 0
@@ -18,6 +18,8 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
     
+    var imageForPoster: URL?
+    
     let sectionTitles: [String] = ["Trending Movies","Popular", "Trending TV", "Upcoming Movies", "Top rated" ]
     
     private let homeFeedTable: UITableView = {
@@ -28,7 +30,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .black
         view.addSubview(homeFeedTable)
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
@@ -40,7 +42,7 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
-        
+       // retrievePoster()
        
     }
     
@@ -48,6 +50,19 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
+    
+//    func retrievePoster() {
+//        APICaller.shared.getTrendingMovies { result in
+//            switch result {
+//            case .success(let title):
+//                imageForPoster.sd_setImage(with: URL(string: title[0].poster_path , completed: nil)
+//
+//
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
     
     private func configureNavbar() {
     

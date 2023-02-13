@@ -81,6 +81,8 @@ class HeroHeaderUIView: UIView {
         heroImageView.frame = bounds
     }
     
+
+    
     required init?(coder: NSCoder) {
         fatalError()
     }

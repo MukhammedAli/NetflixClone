@@ -136,7 +136,7 @@ class APICaller {
     }
     
     func search(with query: String, completion: @escaping (Result<[Title], Error>) -> Void ) {
-        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
         /*
          https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher
          */
@@ -157,8 +157,29 @@ class APICaller {
         
     }
     
-    func getMovie(with query: String) {
-        let url = URL(string: "q=Harry&key=[YOUR_API_KEY]")
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void ) {
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        
+        guard let url = URL(string: "\(Constants.YoutubeBaseURL)q=\(query)&key=\(Constants.YoutubeAPI_KEY)") else {return}
+        
+       
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {return}
+            
+            do {
+                let resutls = try JSONDecoder().decode(YoutubeSearchResponse.self, from: data )
+                completion(.success(resutls.items[0]))
+                
+//                let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+//                completion(.success(results.results))
+            } catch {
+                completion(.failure(error))
+                print(error.localizedDescription)
+               // print(APIError.failedTogetData)
+            }
+        }
+        task.resume()
     }
     
 }

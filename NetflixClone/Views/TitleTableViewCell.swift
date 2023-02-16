@@ -28,7 +28,10 @@ class TitleTableViewCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         return label
+        
+        
     }()
     
     private let titlesPosterUIImageView: UIImageView = {
@@ -61,13 +64,14 @@ class TitleTableViewCell: UITableViewCell {
         titleLabel.snp.makeConstraints {
             $0.left.equalTo(titlesPosterUIImageView.snp.right).inset(-30)
             $0.top.bottom.equalToSuperview()
+            $0.right.equalTo(playTitleButton.snp.left)
 //            $0.top.bottom.equalToSuperview()
             
         }
         
         playTitleButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(20)
-           // $0.left.equalTo(titleLabel.snp.right).inset(-30)
+            
             $0.top.bottom.equalToSuperview()
         }
     }
@@ -85,5 +89,9 @@ class TitleTableViewCell: UITableViewCell {
     
     
 }
+
+
+
+
 
 

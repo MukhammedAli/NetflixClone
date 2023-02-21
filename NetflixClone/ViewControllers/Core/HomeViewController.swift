@@ -86,10 +86,20 @@ class HomeViewController: UIViewController {
     
     private func configureNavbar() {
     
-     
-      var imageIcon = UIImage(named: "netflix_logo")
+        let size: CGFloat = 25
+      let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        logoImageView.contentMode = .scaleAspectFill
+        var imageIcon = UIImage(named: "netflix_logo")
+        logoImageView.image = imageIcon
+        let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        leftButton.addTarget(self, action: #selector(jumpToUpcoming) , for: .touchUpInside)
+        
+        leftButton.addSubview(logoImageView)
+        
+        
+      
         imageIcon =  imageIcon?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: imageIcon, style: .done, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
         
     
         
@@ -102,8 +112,10 @@ class HomeViewController: UIViewController {
     }
     
     
-    @objc func leftBarButtonAction() {
-        print("Hello")
+    
+    
+    @objc func jumpToUpcoming() {
+        navigationController?.pushViewController(UpcomingViewController(), animated: true)
     }
     
   

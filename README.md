@@ -1,6 +1,32 @@
 # NetflixClone
 
 Netflix clone which build to show popular trending films . Has same functionality as netflix app. 
+
+# Description
+Netflix Clone is the prototype project for watching popular movies and serials.
+Project consist of many functionalities as , viewing trailers related to the movie, searching them , getting new trending upcoming movies details. 
+
+# Getting started 
+<ol>
+<li>Make sure you have latest Xcode version installed on your computer.</li>
+<li>Download project files from repository</li>
+<li>Install CocoaPods</li>
+<li>Run pod install in order to install dependencies in your project</li>
+<li>Open the project files in Xcode with xcworkspace, in order to make pods files usable.</li>
+<li>Review your code and make sure that all settings up to date, if you want to avoid errors. </li>
+<li>Run project</li>
+</ol> 
+
+
+You'll see fast splash screen , then tabbars which will navigate you through app.
+
+# Architecture
+
+<ul>
+ <li>Project is implemented with Model-View-ViewModel(MVVM) architecture pattern</li>
+ <li>Used delegating in project in order to see details of views.</li>
+</ul>
+
 <img width="1440" alt="Снимок экрана 2023-02-21 в 18 48 12" src="https://user-images.githubusercontent.com/63705344/220349588-cedd7fcb-c916-4c91-8925-d5c8e6abdbf3.png">
 
 <img width="1440" alt="Снимок экрана 2023-02-21 в 18 48 27" src="https://user-images.githubusercontent.com/63705344/220350206-095a8c54-6c10-45cd-b4c8-5e8a2c7326fe.png">
